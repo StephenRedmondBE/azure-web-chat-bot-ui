@@ -10,9 +10,6 @@ import pandas as pd
 # Set up logging
 logging.basicConfig(level=logging.ERROR)
 
-#os.environ["AZURE_OPENAI_API_KEY"] = ""
-#os.environ["OPENAI_API_TYPE"] = "azure"
-#os.environ["AZURE_OPENAI_ENDPOINT"] = ""
 
 #import openai as OpenAI
 from langchain_openai import OpenAI
@@ -26,12 +23,6 @@ llm = AzureChatOpenAI(
     temperature=0
     )
 '''
-#customer_website_domain = "gov.ie"
-#customer_website_domain = "teagasc.ie"
-#customer_website_domain = "citizensinformation.ie"
-#customer_website_domain = "bankofireland.com"
-#customer_website_domain = "dublincity.ie"
-#customer_website_domain = "bearingpoint.com"
 
 from langchain.schema import BaseRetriever, Document, HumanMessage, AIMessage
 from langchain_community.document_loaders import WebBaseLoader
@@ -49,24 +40,13 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.runnables import RunnablePassthrough,RunnableLambda
 
 
-bing_subscription_key = "85b9e5537fe846e1868dbbb04b51f6e9"
+bing_subscription_key = os.environ["BING_API_KEY"]
 
 #set_debug(True)
 
-
-
-
-
-
-
-
-
-
-
 # Constrain the chat to search only one site
-#customer_website_domain = "tailte.ie"
-#customer_website_domain = "gov.ie"
-customer_website_domain = "nidirect.gov.uk"
+customer_website_domain = "gov.ie"
+
 # Constrain the agent via System Prompt
 qa_system_prompt = """You are an assistant for question-answering tasks. \
 Use the following pieces of retrieved context to answer the question. \
