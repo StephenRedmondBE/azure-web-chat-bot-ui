@@ -1,6 +1,8 @@
 Flask
 Flask-Cors
 langchain
+langchain_community
+langchain_openai
 langsmith
 numpy
 python-dotenv
@@ -9,3 +11,4 @@ tiktoken
 nest_asyncio
 bs4
 pandas
+logging
