@@ -10,4 +10,3 @@ requests
 tiktoken
 nest_asyncio
 bs4
-logging
