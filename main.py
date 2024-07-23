@@ -250,5 +250,5 @@ def get_data():
     
 if __name__ == '__main__':
     chat_history = []
-    app.run()
-    #app.run(host="0.0.0.0", port=8777)
+    #app.run()
+    app.run(host="0.0.0.0", port=8000)
