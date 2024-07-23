@@ -9,4 +9,4 @@ python-dotenv
 requests
 tiktoken
 nest_asyncio
-
+bs4
