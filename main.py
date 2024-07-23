@@ -5,7 +5,6 @@ import nest_asyncio
 from typing import List
 import requests
 import logging
-#import pandas as pd
 
 # Set up logging
 logging.basicConfig(level=logging.ERROR)
