@@ -44,7 +44,8 @@ bing_subscription_key = os.environ["BING_API_KEY"]
 #set_debug(True)
 
 # Constrain the chat to search only one site
-customer_website_domain = "gov.ie"
+#customer_website_domain = "gov.ie"
+customer_website_domain = os.environ["customer_website_domain"]
 
 # Constrain the agent via System Prompt
 qa_system_prompt = """You are an assistant for question-answering tasks. \
